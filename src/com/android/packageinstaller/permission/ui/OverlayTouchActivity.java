@@ -15,12 +15,10 @@
  */
 package com.android.packageinstaller.permission.ui;
 
-import static android.view.WindowManager.LayoutParams.PRIVATE_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
-
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
-import android.os.Bundle;
+import android.provider.Settings;
 import android.view.MotionEvent;
 import android.util.Log;
 
@@ -30,12 +28,6 @@ public class OverlayTouchActivity extends Activity {
 
     public boolean isObscuredTouch() {
         return mObscuredTouch;
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        getWindow().addPrivateFlags(PRIVATE_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
-        super.onCreate(savedInstanceState);
     }
 
     @Override
